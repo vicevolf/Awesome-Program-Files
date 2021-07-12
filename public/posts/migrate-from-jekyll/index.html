@@ -13,16 +13,14 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.com/posts/migrate-from-jekyll/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2014-03-10T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2014-03-10T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-07-10T23:15:43&#43;08:00" />
 
 <title>Migrate to Hugo from Jekyll | 🐱‍💻 音速装机</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.b7a027986b8bd03e9a70ae6870b070a24417f35c702a7f04732664090ebb950d.css" integrity="sha256-t6AnmGuL0D6acK5ocLBwokQX81xwKn8EcyZkCQ67lQ0=" crossorigin="anonymous">
+<link rel="stylesheet" href="/book.min.d9c6f544fd42779de0fdb9315c91c1c1746b1ff8c59fec6bfc6ad9bb06a55b50.css" integrity="sha256-2cb1RP1Cd53g/bkxXJHBwXRrH/jFn&#43;xr/GrZuwalW1A=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
   <script defer src="/zh.search.min.3f939678003546adf97cab52ded45b6f7799b439e0319aa6e162d59b512bda03.js" integrity="sha256-P5OWeAA1Rq35fKtS3tRbb3eZtDngMZqm4WLVm1Er2gM=" crossorigin="anonymous"></script>
-
-  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -487,7 +485,7 @@ With Jekyll, something that looked like</p>
   Set your configuration publish folder to <code>_site</code>
   <a class="anchor" href="#set-your-configuration-publish-folder-to-_site">#</a>
 </h2>
-<p>The default is for Jekyll to publish to <code>_site</code> and for Hugo to publish to <code>public</code>. If, like me, you have <a href="http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html" target="_blank"><code>_site</code> mapped to a git submodule on the <code>gh-pages</code> branch</a>, you&rsquo;ll want to do one of two alternatives:</p>
+<p>The default is for Jekyll to publish to <code>_site</code> and for Hugo to publish to <code>public</code>. If, like me, you have <a href="http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html" target="_blank" rel="noopener"><code>_site</code> mapped to a git submodule on the <code>gh-pages</code> branch</a>, you&rsquo;ll want to do one of two alternatives:</p>
 <ol>
 <li>
 <p>Change your submodule to point to map <code>gh-pages</code> to public instead of <code>_site</code> (recommended).</p>
@@ -510,18 +508,18 @@ With Jekyll, something that looked like</p>
   Convert Jekyll templates to Hugo templates
   <a class="anchor" href="#convert-jekyll-templates-to-hugo-templates">#</a>
 </h2>
-<p>That&rsquo;s the bulk of the work right here. The documentation is your friend. You should refer to <a href="http://jekyllrb.com/docs/templates/" target="_blank">Jekyll&rsquo;s template documentation</a> if you need to refresh your memory on how you built your blog and <a href="/layout/templates/">Hugo&rsquo;s template</a> to learn Hugo&rsquo;s way.</p>
-<p>As a single reference data point, converting my templates for <a href="http://heyitsalex.net/" target="_blank">heyitsalex.net</a> took me no more than a few hours.</p>
+<p>That&rsquo;s the bulk of the work right here. The documentation is your friend. You should refer to <a href="http://jekyllrb.com/docs/templates/" target="_blank" rel="noopener">Jekyll&rsquo;s template documentation</a> if you need to refresh your memory on how you built your blog and <a href="/layout/templates/">Hugo&rsquo;s template</a> to learn Hugo&rsquo;s way.</p>
+<p>As a single reference data point, converting my templates for <a href="http://heyitsalex.net/" target="_blank" rel="noopener">heyitsalex.net</a> took me no more than a few hours.</p>
 <h2 id="convert-jekyll-plugins-to-hugo-shortcodes">
   Convert Jekyll plugins to Hugo shortcodes
   <a class="anchor" href="#convert-jekyll-plugins-to-hugo-shortcodes">#</a>
 </h2>
-<p>Jekyll has <a href="http://jekyllrb.com/docs/plugins/" target="_blank">plugins</a>; Hugo has <a href="/doc/shortcodes/">shortcodes</a>. It&rsquo;s fairly trivial to do a port.</p>
+<p>Jekyll has <a href="http://jekyllrb.com/docs/plugins/" target="_blank" rel="noopener">plugins</a>; Hugo has <a href="/doc/shortcodes/">shortcodes</a>. It&rsquo;s fairly trivial to do a port.</p>
 <h3 id="implementation">
   Implementation
   <a class="anchor" href="#implementation">#</a>
 </h3>
-<p>As an example, I was using a custom <a href="https://github.com/alexandre-normand/alexandre-normand/blob/74bb12036a71334fdb7dba84e073382fc06908ec/_plugins/image_tag.rb" target="_blank"><code>image_tag</code></a> plugin to generate figures with caption when running Jekyll. As I read about shortcodes, I found Hugo had a nice built-in shortcode that does exactly the same thing.</p>
+<p>As an example, I was using a custom <a href="https://github.com/alexandre-normand/alexandre-normand/blob/74bb12036a71334fdb7dba84e073382fc06908ec/_plugins/image_tag.rb" target="_blank" rel="noopener"><code>image_tag</code></a> plugin to generate figures with caption when running Jekyll. As I read about shortcodes, I found Hugo had a nice built-in shortcode that does exactly the same thing.</p>
 <p>Jekyll&rsquo;s plugin:</p>
 <pre><code>module Jekyll
   class ImageTag &lt; Liquid::Tag
@@ -626,7 +624,7 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
   A practical example in a diff
   <a class="anchor" href="#a-practical-example-in-a-diff">#</a>
 </h2>
-<p><a href="http://heyitsalex.net/" target="_blank">Hey, it&rsquo;s Alex</a> was migrated in less than a <em>father-with-kids day</em> from Jekyll to Hugo. You can see all the changes (and screw-ups) by looking at this <a href="https://github.com/alexandre-normand/alexandre-normand/compare/869d69435bd2665c3fbf5b5c78d4c22759d7613a...b7f6605b1265e83b4b81495423294208cc74d610" target="_blank">diff</a>.</p>
+<p><a href="http://heyitsalex.net/" target="_blank" rel="noopener">Hey, it&rsquo;s Alex</a> was migrated in less than a <em>father-with-kids day</em> from Jekyll to Hugo. You can see all the changes (and screw-ups) by looking at this <a href="https://github.com/alexandre-normand/alexandre-normand/compare/869d69435bd2665c3fbf5b5c78d4c22759d7613a...b7f6605b1265e83b4b81495423294208cc74d610" target="_blank" rel="noopener">diff</a>.</p>
 </article>
  
       
@@ -637,12 +635,18 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
 
 
 
+  <div><a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/commit/bdbbb45cc35615c11247c74fe067a125585caf99" title='最后修改者 逊狼 | July 10, 2021' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>July 10, 2021</span>
+    </a>
+  </div>
+
 
 
   <div>
     <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/content.zh/posts/migrate-from-jekyll.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
-      <span>编辑本页</span>
+      <span>改进文档</span>
     </a>
   </div>
 
@@ -658,10 +662,6 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
       </footer>
 
       
-  
-  <div class="book-comments">
-
-</div>
   
  
 
