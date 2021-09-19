@@ -4,6 +4,7 @@ baseURL = 'https://awesome-program-files.vercel.app/'
 title = '🐱‍💻 音速装机'
 theme = 'book'
 defaultContentLanguage = "zh"
+hasCJKLanguage = true
 
 # Book configuration
 disablePathToLower = true
