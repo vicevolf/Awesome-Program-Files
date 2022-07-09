@@ -102,3 +102,36 @@ type: docs
 - [爱发电 - 为我们打赏5元](https://afdian.net/@volfclub)
 {{< /hint >}}
 
+---
+## QQ
+
+{{< columns >}} <!-- begin columns block -->
+
+<img src="/logos/q3t.png" width="80" />
+
+<---> <!-- magic separator, between columns -->
+
+- [x] 中文
+- [x] 免费
+- [ ] 专有
+
+<---> <!-- magic separator, between columns -->
+
+{{< button href="https://github.com/alex-shpak/hugo-book" >}}官网下载{{< /button >}}
+
+镜像1 / 镜像2
+
+{{< /columns >}}
+
+
+{{< hint warning >}} 
+该软件可能存在 **潜在有害程序(PUP)** 行为，如拖慢运行速度，弹出意外广告，修改系统设置，安装捆绑软件等。安装及使用时，请务必多加留心。
+{{< /hint >}}
+
+腾讯 QQ，8亿人在用的即时通讯软件，你不仅可以在各类通讯终端上通过qq聊天交友，还能进行免费的视频、语音通话，或者随时随地收发重要文件。
+
+- 官网：<https://im.qq.com/index>
+- `winget install --id=Tencent.QQ  -e`
+
+---
+
